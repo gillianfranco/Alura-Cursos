@@ -1,5 +1,21 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
 body
 {
+    height: 100vh;
+    box-sizing: border-box;
     background-color: #000;
     color: #F6F6F6;
+}
+.apresentacao
+{
+    display: flex;
+    align-items: center;
+}
+.titulo-destaque
+{
+    color: #22D4FD;
 }
