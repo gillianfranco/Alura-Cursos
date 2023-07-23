@@ -28,8 +28,25 @@
 
     foreach($contas as $cpf => $conta)
     {
-        ['titular' => $titular, 'saldo' => $saldo] = $conta;
-        escreva(
-            mensagem: "{$titular} portador do CPF {$cpf}, possui o saldo de R$ {$saldo}".PHP_EOL
-        );
+        
     }
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+<body>
+    <h1>Contas</h1>
+    <ul>
+        <?php 
+            foreach($contas as $cpf){
+                escreva($cpf);
+            }
+        ?>
+    </ul>
+</body>
+</html>

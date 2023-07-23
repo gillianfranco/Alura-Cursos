@@ -26,9 +26,10 @@
         return $saldo;
     }
 
-    function escreva($mensagem)
+    function escreva(array $conta)
     {
-        echo $mensagem;
+        ['titular' => $titular, 'saldo' => $saldo] = $conta;
+        echo "<li>Titular: {$titular}. Saldo: {$saldo}</li>";
     }
 
     function titularDaContaComLetrasMaiusculas(string &$titular)
