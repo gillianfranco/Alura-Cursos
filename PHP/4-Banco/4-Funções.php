@@ -30,3 +30,8 @@
     {
         echo $mensagem;
     }
+
+    function titularDaContaComLetrasMaiusculas(string &$titular)
+    {
+        $titular = mb_strtoupper($titular);
+    }

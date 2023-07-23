@@ -23,6 +23,8 @@
         saldo: $contas['123.456.789-01']['saldo'], valorDeDeposito: 1000
     );
 
+    titularDaContaComLetrasMaiusculas(titular: $contas['123.456.789-03']['titular']);
+
     foreach($contas as $cpf => $conta)
     {
         escreva(
