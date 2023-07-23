@@ -27,7 +27,8 @@
 
     foreach($contas as $cpf => $conta)
     {
+        ['titular' => $titular, 'saldo' => $saldo] = $conta;
         escreva(
-            mensagem: "{$conta['titular']} portador do CPF {$cpf}, possui o saldo de R$ {$conta['saldo']}".PHP_EOL
+            mensagem: "{$titular} portador do CPF {$cpf}, possui o saldo de R$ {$saldo}".PHP_EOL
         );
     }
