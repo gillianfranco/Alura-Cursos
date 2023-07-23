@@ -24,6 +24,7 @@
     );
 
     titularDaContaComLetrasMaiusculas(titular: $contas['123.456.789-03']['titular']);
+    unset($contas['123.456.789-02']);
 
     foreach($contas as $cpf => $conta)
     {
