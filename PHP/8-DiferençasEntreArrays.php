@@ -14,3 +14,4 @@
     ];
 
     //var_dump(array_diff($primeiroBimestre, $segundoBimestre)); // Retorna a diferença de acordo com o valor dos índices
+    var_dump(array_diff_key($primeiroBimestre, $segundoBimestre)); // Retorna a diferença de acordo com a chave
