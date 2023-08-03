@@ -5,10 +5,21 @@
         'nota' => [10, 10]
     ];
 
-    list('nome' => $nome, 'idade' => $idade, 'nota' => $nota) = $dados;
+    $contas = [
+        [
+            'titular' => 'Gillian',
+            'saldo' => 2032
+        ],
+        [
+            'titular' => 'Maria',
+            'saldo' => 3568
+        ]
+    ];
 
-    var_dump($nome, $idade, $nota);
+    // list('nome' => $nome, 'idade' => $idade, 'nota' => $nota) = $dados;
 
-    foreach($dados as [$nome, $idade, $nota]){
-        echo "$nome tem $idade anos e nota é de: $nota <br>";
+    // var_dump($nome, $idade, $nota);
+
+    foreach($contas as ['titular' => $titular, 'saldo' => $saldo]){
+        echo "$titular tem o saldo de $saldo" . PHP_EOL;
     }
