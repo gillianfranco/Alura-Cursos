@@ -16,8 +16,7 @@
         ]
     ];
 
-    // list('nome' => $nome, 'idade' => $idade, 'nota' => $nota) = $dados;
-
+    // list('nome' => $nome, 'idade' => $idade, 'nota' => $nota) = $dados; // Coleta os dados do array e os armazena em variáveis
     // var_dump($nome, $idade, $nota);
 
     foreach($contas as ['titular' => $titular, 'saldo' => $saldo]){
