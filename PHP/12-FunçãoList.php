@@ -1,8 +1,8 @@
 <?php
     $dados = [
-        'nome' => 'Gillian',
-        'idade' => 17,
-        'nota' => 10
+        'nome' => ['Gillian', 'Maria'],
+        'idade' => [17, 12],
+        'nota' => [10, 10]
     ];
 
     list('nome' => $nome, 'idade' => $idade, 'nota' => $nota) = $dados;
