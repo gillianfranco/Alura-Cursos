@@ -8,3 +8,7 @@
     list('nome' => $nome, 'idade' => $idade, 'nota' => $nota) = $dados;
 
     var_dump($nome, $idade, $nota);
+
+    foreach($dados as [$nome, $idade, $nota]){
+        echo "$nome tem $idade anos e nota é de: $nota <br>";
+    }
