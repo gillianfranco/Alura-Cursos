@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function escreva(value){
+        document.write(value);
+        pulaLinha();
+    }
+
+    function calculaIMC(peso, altura){
+        var imc = peso / (altura * altura);
+        return imc;
+    }
+
+    function mostraResultado(imc){
+        if(imc < 18.5)
+            escreva("Seu imc é " + imc + ", indicando <i>Magreza</i>");
+        else if(imc <= 24.9)
+            escreva("Seu imc é " + imc + ", indicando <i>Nomalidade</i>");
+        else if(imc <= 29.9)
+            escreva("Seu imc é " + imc + ", indicando <i>Sobrepeso</i>");
+        else if(imc >= 30)
+            escreva("Seu imc é " + imc + ", indicando <i>Obesidade</i>");
+    }
+
+    var peso = 58;
+    var altura = 1.76;
+    mostraResultado(calculaIMC(peso, altura));
+</script>
