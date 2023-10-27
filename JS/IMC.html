@@ -6,26 +6,29 @@
 
     function escreva(value){
         document.write(value);
-        pulaLinha();
     }
 
     function calculaIMC(peso, altura){
-        var imc = peso / (altura * altura);
-        return imc;
+        return peso / (altura * altura);
     }
 
     function mostraResultado(imc){
         if(imc < 18.5)
-            escreva("Seu imc é " + imc + ", indicando <i>Magreza</i>");
+            escreva("seu imc é " + imc + ", indicando <i>Magreza</i>.");
         else if(imc <= 24.9)
-            escreva("Seu imc é " + imc + ", indicando <i>Nomalidade</i>");
+            escreva("seu imc é " + imc + ", indicando <i>Nomalidade</i>.");
         else if(imc <= 29.9)
-            escreva("Seu imc é " + imc + ", indicando <i>Sobrepeso</i>");
+            escreva("seu imc é " + imc + ", indicando <i>Sobrepeso</i>.");
         else if(imc >= 30)
-            escreva("Seu imc é " + imc + ", indicando <i>Obesidade</i>");
+            escreva("seu imc é " + imc + ", indicando <i>Obesidade</i>.");
     }
 
-    var peso = 58;
-    var altura = 1.76;
-    mostraResultado(calculaIMC(peso, altura));
+    var nome = prompt("Olá, qual é o seu nome?");
+    var peso = prompt("Prazer em te conhecer " + nome + ". Qual é o seu peso?");
+    var altura = prompt("Qual é a sua altura?");
+    var imc = calculaIMC(peso, altura);
+
+    escreva(nome + ", ");
+    mostraResultado(imc);
+
 </script>
