@@ -3,10 +3,7 @@
     $float = 2.5;
     $array = [1, 2, 3, 4, 5];
     $lista = [
-        1 => 'Posição 1',
-        2 => 'Posição 2',
-        4 => 'Posição 3',
-        7 => 'Posição 4'
+        1, 2, 3, 4
     ];
     $bool = true;
     $nula;
@@ -21,7 +18,7 @@
         echo 'array é um array' . PHP_EOL;
     }
     if(array_is_list($lista)){
-        echo "{$lista} é uma lista" . PHP_EOL;
+        echo "lista é uma lista" . PHP_EOL;
     }
     if(is_bool($bool)){
         echo "{$bool} é booleano" . PHP_EOL;

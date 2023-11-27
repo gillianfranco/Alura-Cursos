@@ -9,7 +9,7 @@
 
     echo 'A chave existe?' . PHP_EOL;
     var_dump(array_key_exists('Ana', $nota)); // Verifica apenas se a chave existe
-    echo 'O valor desta chave é nulo?' . PHP_EOL;
+    echo 'O valor desta chave não é nulo?' . PHP_EOL;
     var_dump(isset($nota['Ana'])); // Verifica se o valor da chave não é nulo
     echo 'O valor existe dentro do array?' . PHP_EOL;
     var_dump(in_array(10, $nota, false)); // Verifica se o valor existe dentro do array
