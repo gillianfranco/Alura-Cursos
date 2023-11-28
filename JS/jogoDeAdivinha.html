@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    function sorteia(n){
+        return Math.round(Math.random() * n);
+    }
+    let n = parseInt(prompt("De até qual número será o sorteio?"));
+    var num = parseInt(prompt("Tente adivinhar o número: "));
+    var numPensado = sorteia(n);
+    console.log(numPensado);
+
+    if(num == numPensado){
+        document.write("Você acertou!");
+    }else{
+        if(numPensado > num){
+            document.write("Ele é maior. O número pensado foi " + numPensado + ".");
+        }else if(numPensado < num){
+            document.write("Ele é menor. O número pensado foi " + numPensado + ".");
+        }
+        
+    }
+</script>
