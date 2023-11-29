@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+<script>
+    var numPessoas = parseInt(prompt("Digite a quantidade de pessoas da sua família?"));
+    var somaIdades = 0;
+
+    for(var i = 1; i <= numPessoas; i++){
+        somaIdades += parseFloat(prompt("Digite a idade da pessoa " + i + ":"));
+    }
+
+    var media = somaIdades / numPessoas;
+
+    document.write("A média das idades é " + media);
+</script>
