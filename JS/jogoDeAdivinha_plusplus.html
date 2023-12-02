@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<input type="number" placeholder="Digite aqui">
+<button>Verificar</button>
+
+<script>
+    var numPensado = [2, 5, 6, 7, 3];
+    var input = document.querySelector("input");
+    var button = document.querySelector("button");
+    
+    input.focus();
+
+    function verifica(){
+        var achou = false;
+
+        for(var i = 0; i < numPensado.length; i++){
+            if(input.value == numPensado[i]){
+                alert("Você acertou!");
+
+                achou = true;
+                break;
+            }
+        }
+
+        if(achou == false){
+            alert("Você errou!");
+        }
+
+        input.value = "";
+        input.focus();
+    }
+
+    button.onclick = verifica;
+
+</script>
