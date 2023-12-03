@@ -1,33 +1,84 @@
 <meta charset="UTF-8">
+
 <input type="number" placeholder="Digite aqui">
-<button>Verificar</button>
+<button type="button">Verificar</button>
 
 <script>
-    var numPensado = [2, 5, 6, 7, 3];
-    var input = document.querySelector("input");
-    var button = document.querySelector("button");
-    
-    input.focus();
 
-    function verifica(){
-        var achou = false;
+    function numAleatorio(){
+        return Math.round(Math.random() * 10);
+    }
 
-        for(var i = 0; i < numPensado.length; i++){
-            if(input.value == numPensado[i]){
-                alert("Você acertou!");
+    function sorteia(qtde){
+        var i = 0;
+        var array = [];
 
-                achou = true;
-                break;
+        while(i < qtde){
+            var aleatorio = numAleatorio();
+            var numRepetido = false;
+
+            if(aleatorio != 0){
+                for(var posicao = 0; posicao < array.length; posicao++){
+                    if(array[posicao] == aleatorio){
+                        numRepetido = true;
+                        break;
+                    }
+                }
+
+                if(numRepetido == false){
+                    array.push(aleatorio);
+                    i++;
+                }
             }
         }
 
-        if(achou == false){
-            alert("Você errou!");
+        return array;
+    }
+
+    function limitarSorteio(){
+        do{
+            var perguntaLimite = parseInt(prompt("Digite a quantidade máxima de números neste sorteio:"));
+            if(perguntaLimite == 0 || perguntaLimite == 1){
+                alert("Ops! Digite um valor válido para o limite do sorteio");
+            }
+        }while(perguntaLimite == 0 || perguntaLimite == 1);
+
+        var limite = perguntaLimite;
+
+        return limite;
+    }
+
+    function verifica(){
+        var achou = false;
+        
+        if(input.value != 0){
+            for(var i = 0; i < numPensados.length; i++){
+                if(input.value == numPensados[i]){
+                    alert("Você acertou!");
+                    
+                    achou = true;
+                    break;
+                }
+            }
+
+            if(achou == false){
+                alert("Você errou!");
+            }
+        }else{
+            alert("Digite um número maior que 0.");
         }
 
         input.value = "";
         input.focus();
     }
+
+    var numPensados = sorteia(limitarSorteio());
+    var input = document.querySelector("input");
+    var button = document.querySelector("button");
+
+    console.log(numPensados);
+    
+    input.focus();
 
     button.onclick = verifica;
 
