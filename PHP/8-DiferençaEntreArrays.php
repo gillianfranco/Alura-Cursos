@@ -1,12 +1,12 @@
 <?php
     $primeiroBimestre = [
-        'Maria' => 10,
-        'João' => 7.5,
+        'Maria' => 8,
+        'João' => 9,
         'Marta' => 10
     ];
 
     $segundoBimestre = [
-        'Maria' => 9,
+        'Maria' => 8,
         'João' => 9,
         'Marta' => 10
     ];
