@@ -13,4 +13,8 @@
         'Isabel'
     ];
 
-    var_dump(array_merge($array1, $array2));
+    $array3 = array_merge($array1, $array2);
+
+    foreach($array3 as $indices => $nomes){
+        echo '"' . $indices . ' -> ' . $nomes . '"'. PHP_EOL;
+    }
