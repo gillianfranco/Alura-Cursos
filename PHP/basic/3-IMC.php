@@ -1,6 +1,6 @@
 <?php
-    $peso = 100;
-    $altura = 1.60;
+    $peso = 62;
+    $altura = 1.64;
 
     $imc = $peso / pow($altura, 2);
     echo "IMC: $imc" . PHP_EOL;
